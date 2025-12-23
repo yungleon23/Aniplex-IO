@@ -87,3 +87,12 @@ body {
   min-height: 100vh;
   padding: 20px;
 }
+a {
+  color: #00d9ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ff4ecd;
+}

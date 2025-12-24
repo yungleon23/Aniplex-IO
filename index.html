@@ -2,29 +2,182 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ANIPLEX.IO</title>
+  <title>ANIPLEX.IO – Read Manga Online</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Anime Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0a0c14;
+      color: #ffffff;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(to right, #05070d, #0f1320);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1f2333;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      color: #00d9ff;
+    }
+
+    header nav a {
+      margin-left: 15px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    header nav a:hover {
+      color: #ff4ecd;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background-image: url("https://i.imgur.com/Smm56Uw.png");
+      background-size: cover;
+      background-position: center;
+      height: 260px;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.6rem;
+      background: rgba(0,0,0,0.6);
+      padding: 12px 18px;
+      border-radius: 10px;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 25px 15px;
+    }
+
+    .section h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      border-left: 4px solid #00d9ff;
+      padding-left: 10px;
+    }
+
+    /* MANGA GRID */
+    .manga-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 15px;
+    }
+
+    .manga-card {
+      background: #111426;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .manga-card:hover {
+      transform: scale(1.05);
+    }
+
+    .manga-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .manga-card p {
+      padding: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="top-bar">
-    <a href="index.html">ANIPLEX.IO</a>
+  <!-- HEADER -->
+  <header>
+    <h1>ANIPLEX.IO</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Latest</a>
+      <a href="#">Genres</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h2>Read Manga in Webtoon Style</h2>
   </div>
 
-  <h1>ANIPLEX.IO</h1>
-  <h3>Read manga in Webtoon style</h3>
+  <!-- FEATURED -->
+  <div class="section">
+    <h3>🔥 Featured Manga</h3>
 
-  <div class="webtoon-container">
+    <div class="manga-grid">
+      <div class="manga-card">
+        <img src="https://i.imgur.com/usgEIV8.png" alt="Manga Cover">
+        <a href="post1.html"><p>Reincarnated as the Strongest Magician</p></a>
+      </div>
 
-    <h3>
-      <a href="post1.html" style="color:#00d9ff;text-decoration:none;">
-        Reincarnated as the Strongest Magician  
-        <br>[Chapter 1]
-      </a>
-    </h3>
+      <div class="manga-card">
+        <img src="https://iw.png" alt="Manga Cover">
+        <p>Shadow Blade Academy</p>
+      </div>
 
+      <div class="manga-card">
+        <img src="https://i.imgUw.png" alt="Manga Cover">
+        <p>Demon King’s Return</p>
+      </div>
+    </div>
   </div>
+
+  <!-- LATEST -->
+  <div class="section">
+    <h3>🆕 Latest Updates</h3>
+
+    <div class="manga-grid">
+      <div class="manga-card">
+        <img src="https://i.imgur.com/usgEIV8.png">
+        <a href="post1.html"><p>Chapter 1 Released</p></a>
+      </div>
+
+      <div class="manga-card">
+        <img src="https://i.imgur.com/usgEIV8.png">
+        <a href="post2.html"><p>Chapter 2 Coming Soon</p></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 ANIPLEX.IO – Anime & Manga Platform
+  </footer>
 
 </body>
 </html>

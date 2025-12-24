@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login | Sign Up – ANIPLEX.IO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #05070d, #0b0d18);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* CARD */
+.auth-box {
+  width: 100%;
+  max-width: 380px;
+  background: #111426;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(0,217,255,0.15);
+}
+
+/* LOGO */
+.auth-box h1 {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  color: #00d9ff;
+  margin-bottom: 10px;
+}
+
+.auth-box p {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #0b0d18;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.auth-box input::placeholder {
+  color: #777;
+}
+
+/* BUTTON */
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: #00d9ff;
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
+  background: #ff4ecd;
+}
+
+/* SWITCH TEXT */
+.switch {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.switch span {
+  color: #00d9ff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* HIDE */
+.hidden {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="auth-box">
+
+  <!-- LOGIN -->
+  <div id="loginForm">
+    <h1>ANIPLEX.IO</h1>
+    <p>Login to your account</p>
+
+    <input type="text" placeholder="Username or Email">
+    <input type="password" placeholder="Password">
+
+    <button>Login</button>
+
+    <div class="switch">
+      Don’t have an account? <span onclick="showSignup()">Sign Up</span>
+    </div>
+  </div>
+
+  <!-- SIGN UP -->
+  <div id="signupForm" class="hidden">
+    <h1>ANIPLEX.IO</h1>
+    <p>Create a new account</p>
+
+    <input type="text" placeholder="Username">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+
+    <button>Create Account</button>
+
+    <div class="switch">
+      Already have an account? <span onclick="showLogin()">Login</span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function showSignup() {
+  document.getElementById("loginForm").classList.add("hidden");
+  document.getElementById("signupForm").classList.remove("hidden");
+}
+
+function showLogin() {
+  document.getElementById("signupForm").classList.add("hidden");
+  document.getElementById("loginForm").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>

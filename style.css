@@ -1,98 +1,86 @@
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  background-color: #f4f6f8;
-  color: #333;
-}
-
-/* Header */
-header {
-  background-color: #1e293b;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-/* Navigation */
-nav {
-  background-color: #0f172a;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Main content */
-main {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
-
-/* Blog card */
-.post-card {
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-.post-card h2 {
-  margin-top: 0;
-}
-
-.post-card a {
-  color: #2563eb;
-  text-decoration: none;
-}
-
-.post-card a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #e5e7eb;
-  margin-top: 40px;
-}
-
-a {
-  display: block;
-}
-body {
+/* RESET */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+}
+
+/* BODY & BACKGROUND */
+body {
+  font-family: Arial, Helvetica, sans-serif;
   background-image: url("https://i.imgur.com/Smm56Uw.png");
-  background-size: cover;
-  background-position: center;
+  background-size: 1200px auto; /* makes background SMALLER */
+  background-position: top center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
+  background-color: #05070d;
   color: #ffffff;
 }
+
+/* DARK OVERLAY */
 .overlay {
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.7);
   min-height: 100vh;
   padding: 20px;
 }
-a {
+
+/* HEADINGS (BIG FOR PHONES) */
+h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 1.4rem;
+  margin-top: 25px;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+nav a {
+  font-size: 1.1rem;
   color: #00d9ff;
   text-decoration: none;
   font-weight: bold;
 }
 
+nav a:hover {
+  color: #ff4ecd;
+}
+
+/* LINKS */
+a {
+  color: #00d9ff;
+  text-decoration: none;
+}
+
 a:hover {
   color: #ff4ecd;
+}
+
+/* PARAGRAPHS (VERY IMPORTANT FOR MOBILE READERS) */
+p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+/* IMAGES */
+img {
+  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
 }

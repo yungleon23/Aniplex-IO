@@ -9,7 +9,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url("https://i.imgur.com/Smm56Uw.png");
-  background-size: 1600px auto; /* makes background SMALLER */
+  background-size: 1300px auto; /* makes background SMALLER */
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: scroll;

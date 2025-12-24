@@ -1,1 +1,129 @@
-<h1>Coming soon!!📌</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Manga Genre Filter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  background: #0a0c14;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 20px;
+}
+
+/* GENRE BUTTONS */
+.genre-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.genre-buttons button {
+  background: #111426;
+  border: 1px solid #1f2333;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.genre-buttons button.active {
+  background: #00d9ff;
+  color: #000;
+}
+
+.genre-buttons button:hover {
+  background: #ff4ecd;
+  color: #000;
+}
+
+/* MANGA GRID */
+.manga-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.manga-card {
+  background: #111426;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.manga-card img {
+  width: 100%;
+}
+
+.manga-card p {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Browse by Genre</h2>
+
+<!-- GENRE FILTER BUTTONS -->
+<div class="genre-buttons">
+  <button class="active" onclick="filterGenre('all', this)">All</button>
+  <button onclick="filterGenre('action', this)">Action</button>
+  <button onclick="filterGenre('fantasy', this)">Fantasy</button>
+  <button onclick="filterGenre('romance', this)">Romance</button>
+  <button onclick="filterGenre('isekai', this)">Isekai</button>
+</div>
+
+<!-- MANGA LIST -->
+<div class="manga-grid">
+
+  <div class="manga-card" data-genre="action fantasy isekai">
+    <img src="https://i.imgur.com/usgEIV8.png">
+    <a href="post1.html"><p>Reincarnated as the Strongest Magician</p></a>
+  </div>
+
+  <div class="manga-card" data-genre="action">
+    <img src="https://i.imgur.com/Uw.png">
+    <p>Shadow Blade Academy</p>
+  </div>
+
+  <div class="manga-card" data-genre="romance fantasy">
+    <img src="https://i.imgur.com/Smmw.png">
+    <p>Moonlight Promise</p>
+  </div>
+
+  <div class="manga-card" data-genre="isekai fantasy">
+    <img src="https://i.imgur.com/SmUw.png">
+    <p>Demon King’s Return</p>
+  </div>
+
+</div>
+
+<script>
+function filterGenre(genre, button) {
+  const cards = document.querySelectorAll('.manga-card');
+  const buttons = document.querySelectorAll('.genre-buttons button');
+
+  buttons.forEach(btn => btn.classList.remove('active'));
+  button.classList.add('active');
+
+  cards.forEach(card => {
+    const genres = card.dataset.genre.split(' ');
+    if (genre === 'all' || genres.includes(genre)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>

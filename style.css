@@ -1,3 +1,6 @@
+/* IMPORT ANIME FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap');
+
 /* RESET */
 * {
   box-sizing: border-box;
@@ -7,53 +10,60 @@
 
 /* BODY & BACKGROUND */
 body {
-  font-family: Face off, Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-image: url("https://i.imgur.com/Smm56Uw.png");
-  background-size: 1300px auto; /* makes background SMALLER */
+  background-size: 1200px auto; /* background smaller */
   background-position: top center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
   background-color: #05070d;
   color: #ffffff;
 }
 
-/* DARK OVERLAY */
+/* OVERLAY */
 .overlay {
   background: rgba(0, 0, 0, 0.7);
   min-height: 100vh;
   padding: 20px;
 }
 
-/* HEADINGS (BIG FOR PHONES) */
+/* LOGO / MAIN TITLE */
 h1 {
+  font-family: 'Orbitron', sans-serif;
   font-size: 4rem;
   text-align: center;
+  letter-spacing: 2px;
   margin-bottom: 15px;
+  color: #00d9ff;
 }
 
+/* SUBTITLE */
 h3 {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   margin-bottom: 20px;
+  color: #cccccc;
 }
 
+/* POST TITLES */
 h4 {
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.5rem;
-  margin-top: 25px;
+  margin-top: 30px;
+  line-height: 1.4;
 }
 
 /* NAVIGATION */
 nav {
   display: flex;
   justify-content: space-around;
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
 nav a {
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.5rem;
   color: #00d9ff;
   text-decoration: none;
-  font-weight: bold;
 }
 
 nav a:hover {
@@ -70,10 +80,10 @@ a:hover {
   color: #ff4ecd;
 }
 
-/* PARAGRAPHS (VERY IMPORTANT FOR MOBILE READERS) */
+/* PARAGRAPHS (PHONE FRIENDLY) */
 p {
   font-size: 1.85rem;
-  line-height: 1.8;
+  line-height: 1.9;
   margin-bottom: 18px;
 }
 

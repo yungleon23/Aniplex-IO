@@ -26,19 +26,19 @@ body {
 
 /* HEADINGS (BIG FOR PHONES) */
 h1 {
-  font-size: 2.2rem;
+  font-size: 5rem;
   text-align: center;
   margin-bottom: 15px;
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 3rem;
   text-align: center;
   margin-bottom: 20px;
 }
 
 h4 {
-  font-size: 1.4rem;
+  font-size: 2.2rem;
   margin-top: 25px;
 }
 
@@ -50,7 +50,7 @@ nav {
 }
 
 nav a {
-  font-size: 1.1rem;
+  font-size: 2.1rem;
   color: #00d9ff;
   text-decoration: none;
   font-weight: bold;
@@ -72,7 +72,7 @@ a:hover {
 
 /* PARAGRAPHS (VERY IMPORTANT FOR MOBILE READERS) */
 p {
-  font-size: 1.15rem;
+  font-size: 2.15rem;
   line-height: 1.8;
   margin-bottom: 18px;
 }
